@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cedar &amp; Copper Plumbing Co. — Portland plumbing, flat rates, no overtime surcharge</title>
+<meta name="description" content="Fictional demo site. Residential and light commercial plumbing in Portland, OR: leaks, drains, water heaters, repipes, gas lines. Flat-rate quotes.">
+<meta name="color-scheme" content="light">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Plumber","name":"Cedar & Copper Plumbing Co.","foundingDate":"2011","telephone":"+15035550142","email":"office@cedarandcopper.example","address":{"@type":"PostalAddress","streetAddress":"2418 SE Division St, Unit B","addressLocality":"Portland","addressRegion":"OR","postalCode":"97202","addressCountry":"US"},"areaServed":"Portland metro","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"14:00"}]}
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#fbfaf7; --card:#ffffff; --ink:#16232c; --mut:#68757f; --line:#e5e2db;
+  --blue:#1f5f8b; --copper:#a9663a; --soft:#f3f1ea;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:400 17px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{line-height:1.2;letter-spacing:-.015em;margin:0}
+h1{font-size:clamp(1.8rem,4.3vw,2.5rem);font-weight:640}
+h2{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--mut);margin-bottom:1.1rem}
+h3{font-size:1rem;font-weight:640;margin:0 0 .3rem}
+p{margin:.5rem 0}
+a{color:var(--blue);text-underline-offset:.18em}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--card);padding:.5rem .8rem;border:1px solid var(--line)}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+header{border-bottom:1px solid var(--line);background:var(--card)}
+.bar{display:flex;flex-wrap:wrap;gap:.7rem 1.4rem;align-items:center;justify-content:space-between;padding:.85rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:640;letter-spacing:-.01em}
+.brand .i{color:var(--copper);width:24px;height:24px}
+.brand small{display:block;font-weight:400;font-size:.72rem;color:var(--mut)}
+nav ul{display:flex;flex-wrap:wrap;gap:1.05rem;list-style:none;margin:0;padding:0;font-size:.9rem}
+nav a{color:var(--mut);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.tel{font-weight:640;text-decoration:none;white-space:nowrap}
+section{padding:2.7rem 0;border-bottom:1px solid var(--line)}
+.slab{padding-top:2.2rem}
+.hero{padding:3rem 0 2.6rem;display:grid;gap:2rem;grid-template-columns:1.15fr .85fr;align-items:center}
+@media(max-width:52rem){.hero{grid-template-columns:1fr}}
+.hero p.sub{color:var(--mut);font-size:1.05rem;margin-top:.7rem}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem}
+.fig svg{display:block;width:100%;height:auto;stroke:var(--ink);fill:none;stroke-width:2.4;stroke-linecap:round}
+.fig .cu{stroke:var(--copper)}.fig .bl{stroke:var(--blue)}
+.fig figcaption{font-size:.8rem;color:var(--mut);margin-top:.6rem}
+ul.b{list-style:none;margin:.9rem 0 0;padding:0}
+ul.b li{position:relative;padding-left:1.05rem;margin:.26rem 0}
+ul.b li::before{content:"—";position:absolute;left:0;color:var(--mut)}
+.grid{display:grid;gap:1.5rem 2.3rem;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.1rem}
+.card .i{color:var(--blue)}
+.head{display:flex;align-items:center;gap:.55rem;margin-bottom:.4rem}
+.head h3{margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem 1.3rem;align-items:center;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--blue);color:#fff;
+  padding:.7rem 1.1rem;border-radius:3px;font-weight:600;text-decoration:none;border:1px solid var(--blue)}
+.btn.ghost{background:transparent;color:var(--blue)}
+.btn:hover{background:#1a5075}
+.btn.ghost:hover{background:var(--soft)}
+.status{font-size:.9rem;color:var(--mut);margin:0}
+.status b{color:var(--ink)}
+.pill{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);background:var(--soft);
+  border-radius:20px;padding:.2rem .7rem;font-size:.82rem;font-weight:600}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--copper)}
+.box{border-left:3px solid var(--blue);background:var(--soft);padding:.9rem 1.1rem;border-radius:0 3px 3px 0;margin-top:1.4rem}
+dl.rows{margin:0}
+dl.rows>div{display:flex;flex-wrap:wrap;gap:.3rem 1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+dl.rows>div:last-child{border-bottom:0}
+dt{min-width:8rem;color:var(--mut);font-size:.92rem}
+dd{margin:0;flex:1 1 13rem}
+table{width:100%;border-collapse:collapse;margin-top:.4rem}
+th,td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);font-size:.95rem}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;color:var(--mut);font-weight:700}
+td:last-child,th:last-child{text-align:right}
+details{border-bottom:1px solid var(--line);padding:.8rem 0}
+summary{cursor:pointer;font-weight:640}
+details p{color:var(--mut);max-width:50rem}
+ol.steps{margin:0;padding-left:1.3rem}
+ol.steps li{margin:.55rem 0}
+ol.steps b{display:block;font-weight:640}
+ol.steps span{color:var(--mut)}
+footer{padding:2.2rem 0 3rem;font-size:.9rem;color:var(--mut)}
+footer ul{list-style:none;margin:.4rem 0 0;padding:0}
+footer li{position:relative;padding-left:1.05rem;margin:.28rem 0}
+footer li::before{content:"—";position:absolute;left:0}
+footer .sig{color:var(--ink);font-weight:640;margin-top:1.1rem}
+.note{border-top:1px solid var(--line);margin-top:1.1rem;padding-top:.85rem;font-size:.82rem}
+#test{white-space:pre-wrap;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;margin-top:.8rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- inline SVG symbol set: no icon font, no image files, no requests -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.2 4.3 5 7 5 9.5a5 5 0 0 1-10 0C7 10 8.8 7.3 12 3z"/></symbol>
+  <symbol id="i-drain" viewBox="0 0 24 24"><path d="M4 8c2.4-1.9 4.3 1.9 6.7 0S15.6 6.1 20 8"/><path d="M4 13c2.4-1.9 4.3 1.9 6.7 0S15.6 11.1 20 13"/><path d="M4 18c2.4-1.9 4.3 1.9 6.7 0S15.6 16.1 20 18"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c2.4 3 3.8 4.7 3.8 7a3.8 3.8 0 0 1-7.6 0c0-1.2.5-2.2 1.3-3.1.4 1 .9 1.6 1.7 2 .3-1.5.5-3 .8-5.9z"/><path d="M6 20h12"/></symbol>
+  <symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 15V9h6a3 3 0 0 0 3-3V3"/><path d="M6 19h8a3 3 0 0 0 3-3v-4"/><path d="M9 21v-1.5"/></symbol>
+  <symbol id="i-faucet" viewBox="0 0 24 24"><path d="M4 9h11a3 3 0 0 1 3 3v2"/><path d="M18 14v3"/><path d="M4 9V7.5"/><path d="M4 11.5V10"/><path d="M4 20h6"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><path d="M4 20h16"/></symbol>
+  <symbol id="i-shower" viewBox="0 0 24 24"><path d="M12 3v4"/><path d="M5 7h14a7 7 0 0 0-14 0z"/><path d="M9 12v3"/><path d="M12 12v4.5"/><path d="M15 12v3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l8.5 15.5h-17z"/><path d="M12 10v4"/><path d="M12 16.6v.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.6v6.1c0 4.4-2.9 7.4-7 9.3-4.1-1.9-7-4.9-7-9.3V5.6z"/><path d="M9 12l2 2 4-4.2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6-5.5 6-10.2A6 6 0 1 0 6 10.8C6 15.5 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.5c1 2.4 2.6 4 5 5l1.5-2 4 1.5V18c0 1.1-.9 2-2 2C11.6 20 4 12.4 4 6c0-1.1.9-2 2-2z"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24"><path d="M14 3l7 7"/><path d="M12 5l7 7-6 6-2.5-2.5"/><path d="M6.5 15.5l2 2-3.5 3.5z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <span class="brand">
+      <svg class="i" aria-hidden="true"><use href="#i-drop"/></svg>
+      <span>Cedar &amp; Copper Plumbing Co.<small>Portland, Oregon · licensed &amp; insured · est. 2011</small></span>
+    </span>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#area">Service area</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="tel" href="tel:+15035550142"><svg class="i" style="vertical-align:-4px" aria-hidden="true"><use href="#i-phone"/></svg> (503) 555-0142</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap slab" style="max-width:64rem" aria-labelledby="h1">
+    <div>
+      <span class="pill"><span class="dot" aria-hidden="true"></span><span id="pilltext">Checking hours…</span></span>
+      <h1 id="h1" style="margin-top:.9rem">Plumbing work quoted flat, finished once.</h1>
+      <p class="sub">Residential and light commercial repairs across Southeast and the Portland metro.</p>
+      <ul class="b">
+        <li>No overtime surcharge on scheduled work, even at 5 p.m.</li>
+        <li>After-hours emergency line for burst pipes and no-water calls.</li>
+        <li>Two-year labour warranty on repairs we make.</li>
+        <li>Camera-located drains and pressure-tested repairs before we leave.</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="tel:+15035550142"><svg class="i" style="color:#fff" aria-hidden="true"><use href="#i-phone"/></svg> Call dispatch</a>
+        <a class="btn ghost" href="#rates"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg> See rates</a>
+        <p class="status" id="status"></p>
+      </div>
+    </div>
+    <figure class="fig" style="margin:0">
+      <svg viewBox="0 0 360 150" role="img" aria-label="Line drawing of a pipe run with a shut-off valve, pressure gauge and drain point">
+        <path d="M8 118h84V62h84v56h48V70h124" class="cu"/>
+        <path d="M92 54v16M176 54v16M224 62v16M272 70v14"/>
+        <circle cx="176" cy="34" r="15"/>
+        <path d="M161 34h30M176 19v30M176 49v9"/>
+        <circle cx="272" cy="48" r="10" class="bl"/>
+        <path d="M272 58v12" class="bl"/>
+        <path d="M34 118h20v10a10 10 0 0 1-20 0z" class="bl"/>
+        <path d="M344 62v-8" />
+      </svg>
+      <figcaption>Every repair ends the same way: isolation valve checked, line pressure tested, drain flushed.</figcaption>
+    </figure>
+  </section>
+
+  <section id="services" aria-labelledby="h2s">
+    <div class="wrap">
+      <h2 id="h2s">Services</h2>
+      <ul class="grid b" style="margin:0">
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-drop"/></svg><h3>Leak detection &amp; repair</h3></div>
+            <ul class="b"><li>Hidden leaks under slabs, in walls and at fixtures</li><li>Dye, pressure and moisture-meter tests</li><li>Solder, PEX or copper repair to match the existing line</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-drain"/></svg><h3>Drain cleaning</h3></div>
+            <ul class="b"><li>Kitchen, bath, laundry and main line clogs</li><li>Jetting plus camera locator on repeat blockages</li><li>Root cutting and clean-out install when needed</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-flame"/></svg><h3>Water heaters</h3></div>
+            <ul class="b"><li>Gas and electric tank replacements</li><li>Thermostat, element and dip-tube repair</li><li>Expansion tank and pan drain to code</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-pipe"/></svg><h3>Repiping</h3></div>
+            <ul class="b"><li>Galvanised and polybutylene replacement</li><li>PEX or copper partial runs</li><li>Work staged room by room so the house stays live</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-faucet"/></svg><h3>Fixtures &amp; faucets</h3></div>
+            <ul class="b"><li>Faucets, toilets, shut-offs and disposals</li><li>Washer, dishwasher and ice-maker hookups</li><li>Pressure balancing and flow troubleshooting</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg><h3>Gas lines</h3></div>
+            <ul class="b"><li>Ranges, dryers, fire pits, outdoor kitchens</li><li>Leak testing and regulator replacement</li><li>Permit and inspection paperwork handled</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-shower"/></svg><h3>Bath &amp; kitchen remodel rough-in</h3></div>
+            <ul class="b"><li>Tub, shower valve and drain relocation</li><li>Sump pumps and backwater valves</li><li>Inspection-ready rough-in</li></ul>
+          </article>
+        </li>
+        <li style="padding:0">
+          <article class="card">
+            <div class="head"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><h3>Emergency call-out</h3></div>
+            <ul class="b"><li>Nights, weekends and holidays</li><li>Target arrival 90 minutes inside I-205</li><li>Water shut down and made safe before quotes</li></ul>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rates" aria-labelledby="h2r">
+    <div class="wrap">
+      <h2 id="h2r">Rates</h2>
+      <table>
+        <caption class="status" style="caption-side:bottom;text-align:left;padding-top:.6rem">Sample rates for a fictional business. Written quote always issued before work starts.</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Price</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">Diagnostic visit (Mon–Fri, 7–18)</th><td>$89</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">Hourly labour, residential</th><td>$135 / hr</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">After-hours call-out</th><td>$210 first hour</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">Main line jetting</th><td>from $340</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">40 gal water heater, installed</th><td>from $1,450</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">Materials</th><td>at cost + 15%</td></tr>
+          <tr><th scope="row" style="font-weight:400;text-transform:none;letter-spacing:0;color:inherit;font-size:.95rem;padding-left:0">Repair labour warranty</th><td>2 years</td></tr>
+        </tbody>
+      </table>
+      <div class="box">
+        <strong>Quoted once, then honoured.</strong>
+        <ul class="b"><li>Diagnostic fee is credited to the job if you approve the quote.</li><li>No travel fees inside the service area.</li><li>Price changes only if hidden damage is found, and only after you approve it in writing.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" aria-labelledby="h2a">
+    <div class="wrap">
+      <h2 id="h2a">Service area</h2>
+      <div class="grid">
+        <div>
+          <h3>Southeast &amp; close-in</h3>
+          <ul class="b"><li>Sellwood, Westmoreland, Eastmoreland</li><li>Hawthorne, Buckman, Sunnyside</li><li>Laurelhurst, Mount Tabor, Montavilla</li></ul>
+        </div>
+        <div>
+          <h3>Metro</h3>
+          <ul class="b"><li>Milwaukie, Gladstone, Happy Valley</li><li>Lake Oswego, Tigard, Beaverton</li><li>Vancouver, WA — scheduled work only</li></ul>
+        </div>
+        <div>
+          <h3>Clients</h3>
+          <ul class="b"><li>Homeowners and renters</li><li>Restaurants and small retail</li><li>Property managers with 5+ units</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" aria-labelledby="h2p">
+    <div class="wrap">
+      <h2 id="h2p">Process</h2>
+      <div class="grid" style="align-items:start">
+        <ol class="steps">
+          <li><b>Book a window</b><span>Two-hour arrival window, text when the plumber is on the way.</span></li>
+          <li><b>Diagnose on site</b><span>Cause confirmed before any part is ordered.</span></li>
+          <li><b>Flat written quote</b><span>Parts, labour and duration listed. You approve it or we leave.</span></li>
+          <li><b>Repair and test</b><span>Pressure-tested, drained, area protected and cleaned.</span></li>
+          <li><b>Invoice and warranty</b><span>Photos of the work, itemised invoice, two-year labour cover.</span></li>
+        </ol>
+        <div class="box" style="margin:0">
+          <strong>Before we arrive</strong>
+          <ul class="b">
+            <li>Shut the main valve (usually near the meter or street side).</li>
+            <li>Open the lowest faucet in the house to drain the line.</li>
+            <li>Kill power to any outlet or appliance the water can reach.</li>
+            <li>Move furniture and electronics off wet flooring.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="h2f">
+    <div class="wrap">
+      <h2 id="h2f">FAQ</h2>
+      <details open><summary>Do you charge extra to work evenings or weekends?</summary><p>Scheduled Mon–Fri work is billed at the standard rate at any hour up to 18:00. The $210 first-hour emergency rate applies to nights, weekends and holidays.</p></details>
+      <details><summary>How fast is emergency response?</summary><p>Target arrival is 90 minutes inside the I-205 loop and same-day in the outer metro. Dispatch gives an honest ETA when you call rather than a promise that is not kept.</p></details>
+      <details><summary>Are you licensed and insured?</summary><p>Yes: Oregon CCB licensed, bonded, $2M general liability, and all plumbers hold valid state licences.</p></details>
+      <details><summary>Do you handle permits?</summary><p>Yes, for water heaters, gas lines and repipes. Any permit and inspection cost appears as a separate line on the quote.</p></details>
+      <details><summary>Will you tell me when repairing is the wrong call?</summary><p>Yes. If a line or heater is past economical repair, you get the repair price and the replacement price side by side, with no pressure to choose.</p></details>
+      <details><summary>What if the problem comes back?</summary><p>Labour is covered for two years. Call within that period and the return visit is on us.</p></details>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="h2c">
+    <div class="wrap">
+      <h2 id="h2c">Contact</h2>
+      <div class="grid">
+        <div>
+          <dl class="rows">
+            <div><dt>Office</dt><dd>2418 SE Division St, Unit B<br>Portland, OR 97202</dd></div>
+            <div><dt>Dispatch</dt><dd><a href="tel:+15035550142">(503) 555-0142</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:office@cedarandcopper.example">office@cedarandcopper.example</a></dd></div>
+            <div><dt>Hours</dt><dd>Mon–Fri 7:00–18:00 · Sat 8:00–14:00 · Sun closed<br>Emergency line staffed 24/7</dd></div>
+            <div><dt>Licence</dt><dd>Oregon CCB #219874 (fictional)</dd></div>
+          </dl>
+          <p class="status" id="status2"></p>
+        </div>
+        <div class="card">
+          <div class="head"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><h3>Yard &amp; office</h3></div>
+          <ul class="b">
+            <li>Vans dispatched from SE Division, off I-5</li>
+            <li>Street parking, walk-in office Mon–Fri</li>
+            <li>No in-house call centre: dispatch answers direct</li>
+          </ul>
+          <div class="head" style="margin-top:1rem"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><h3>Guarantees</h3></div>
+          <ul class="b">
+            <li>Written quote honoured</li>
+            <li>Two-year labour warranty on repairs</li>
+            <li>Fully insured crews, background-checked</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><strong>Stack:</strong> single HTML file — semantic markup, inline CSS, ~35 lines of vanilla JavaScript, inline SVG icon sprite and figure. No framework, no CDN, no build step, no cookies, no analytics, no external requests.</li>
+      <li><strong>Made by</strong> Roger Pla Ballús with Claude Sonnet 4.5 (Anthropic).</li>
+      <li><strong>Fictional business</strong> for demonstration: name, address, phone (503) 555-0142, licence and rates are invented. Not a real company.</li>
+    </ul>
+    <p class="sig">Cedar &amp; Copper Plumbing Co. · Portland, Oregon · est. 2011</p>
+    <p class="note">Accessibility: landmarks, skip link, keyboard focus rings, AA contrast, light-only palette, no animation. <span id="testlink"></span></p>
+    <pre id="test" hidden></pre>
+  </div>
+</footer>
+
+<script>
+// Open/closed indicator. ponytail: fixed weekly hours in the visitor's local clock, US-only audience assumed.
+const HOURS={1:[7,18],2:[7,18],3:[7,18],4:[7,18],5:[7,18],6:[8,14]}; // closed Sunday
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function state(d){
+  const day=d.getDay(), h=d.getHours()+d.getMinutes()/60, t=HOURS[day];
+  if(t&&h>=t[0]&&h<t[1]) return{open:true,msg:"Open now, until "+t[1]+":00"};
+  for(let i=0;i<8;i++){
+    const nd=new Date(d); nd.setDate(d.getDate()+i);
+    const nw=HOURS[nd.getDay()]; if(!nw) continue;
+    if(i===0&&h<nw[0]) return{open:false,msg:"Closed now, opens today at "+nw[0]+":00"};
+    if(i>0) return{open:false,msg:(i===1?"Closed now, opens tomorrow at ":"Closed now, opens "+DAYS[nd.getDay()]+" at ")+nw[0]+":00"};
+  }
+  return{open:false,msg:"Closed now"};
+}
+function paint(){
+  const o=state();
+  document.getElementById("pilltext").textContent=o.open?"Open now":"Closed";
+  document.getElementById("status").innerHTML="Office hours Mon–Fri 7:00–18:00, Sat 8:00–14:00. <b>"+o.msg+"</b>. Emergency line 24/7.";
+  document.getElementById("status2").innerHTML="<b>"+o.msg+"</b>. Burst pipe or no water? Call the emergency line, staffed 24/7.";
+}
+paint();
+
+// Direct test of the hours logic: index.html?test=1
+if(location.search.includes("test=1")){
+  const cases=[
+    [new Date(2026,0,5,9),true],[new Date(2026,0,5,6,30),false],[new Date(2026,0,5,17,59),true],
+    [new Date(2026,0,5,18),false],[new Date(2026,0,10,10),true],[new Date(2026,0,10,14),false],[new Date(2026,0,11,12),false]
+  ];
+  const out=cases.map(([d,want],i)=>(state(d).open===want?"PASS ":"FAIL ")+
+    "case "+i+" · "+DAYS[d.getDay()]+" "+d.getHours()+":"+String(d.getMinutes()).padStart(2,"0")+
+    " → "+(state(d).open?"open":"closed"));
+  const el=document.getElementById("test"); el.hidden=false; el.textContent=out.join("\n");
+  document.getElementById("testlink").innerHTML="Self-test: <a href='?test=1'>?test=1</a> ("+
+    out.filter(r=>r[0]==="P").length+"/"+out.length+" PASS)";
+  console.info(out.join("\n"));
+}else{
+  document.getElementById("testlink").innerHTML="Self-test: add <a href='?test=1'>?test=1</a> to the URL.";
+}
+</script>
+</body>
+</html>
