@@ -1,7 +1,7 @@
 # Cedar & Copper Plumbing Co. — single-page demo
 
-- Fictional plumbing business (Portland, OR). Invented name, address, phone, licence, rates.
-- Made with **Claude Sonnet 4.5** (Anthropic).
+- Fictional plumbing business. 
+- Made with **DeepSeek 4.1 Flash** (DeepSeek).
 - Made by **Roger Pla Ballús**.
 
 ## Stack used
