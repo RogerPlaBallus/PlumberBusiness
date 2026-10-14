@@ -1,8 +1,5 @@
-# Cedar & Copper Plumbing Co. — single-page demo
-
-- Fictional plumbing business. 
-- Made with **DeepSeek 4.1 Flash** (DeepSeek).
-- Made by **Roger Pla Ballús**.
+# Fictional plumbing business
+- Made with **DeepSeek 4.1 Flash** by **Roger Pla Ballús**.
 
 ## Stack used
 
